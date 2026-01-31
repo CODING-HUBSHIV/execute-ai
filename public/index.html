@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="Decide. Execute. No excuses.">
+    <title>EXECUTE</title>
+    <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Georgia:ital,wght@1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Screen 1: Intention -->
+    <div id="intentionScreen" class="screen intention-screen active">
+        <h1 class="title">Set focus goal</h1>
+        <div class="input-container">
+            <input 
+                type="text" 
+                id="goalInput" 
+                class="goal-input" 
+                placeholder="Enter today's focus goal"
+                autocomplete="off"
+            >
+        </div>
+        <button id="startBtn" class="start-btn" disabled>START</button>
+    </div>
+    <!-- Screen 2: Execution -->
+    <div id="executionScreen" class="screen execution-screen">
+        <div class="objective-section">
+            <p class="objective-label">Current Objective</p>
+            <h2 id="goalDisplay" class="objective-text"></h2>
+        </div>
+        
+        <div id="motivationSection" class="motivation-section">
+            <p class="loading-text">Preparing your commands...</p>
+        </div>
+        <div class="bottom-section">
+            <div class="status-indicator">
+                <div class="pulse-dot"></div>
+                <span class="status-text">Execution Active</span>
+            </div>
+            <button id="finishBtn" class="finish-btn">Finish Task</button>
+        </div>
+    </div>
+    <script src="script.js" defer></script>
+</body>
+</html>
